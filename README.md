@@ -20,7 +20,7 @@ Assuming the component will be imported from within the `pages` directory, one c
 `import { Button } from '../design-system/button`
 
 ```jsx
-<Button type="secondary" bgColor="purple">
+<Button type="primary" bgColor="purple">
   Button
 </Button>
 ```
