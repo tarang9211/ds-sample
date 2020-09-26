@@ -9,7 +9,7 @@ This repository, `ds-sample` is a sample project of an extremely basic button co
 
 ### Setup
 
-1. `git clone`
+1. `git clone https://github.com/tarang9211/ds-sample.git`
 2. `yarn`
 3. `yarn dev`
 
