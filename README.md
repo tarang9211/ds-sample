@@ -18,3 +18,9 @@ This repository, `ds-sample` is a sample project of an extremely basic button co
 Assuming the component will be imported from within the `pages` directory, one can import it in the following way
 
 `import { Button } from '../design-system/button`
+
+```jsx
+<Button type="secondary" bgColor="purple">
+  Button
+</Button>
+```
