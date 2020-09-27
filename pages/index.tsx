@@ -18,6 +18,7 @@ const Index = () => {
         bgColor="purple"
         isLoading={loading}
         loadingText={"Submitting"}
+        onClick={() => alert("Click the adjacent button")}
       >
         Submit
       </Button>

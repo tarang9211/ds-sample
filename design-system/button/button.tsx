@@ -73,6 +73,11 @@ function computeVariants({
     ":hover": {
       backgroundColor: "#4a004a",
     },
+    ":disabled": {
+      backgroundColor: "grey",
+      border: "2px solid grey",
+      pointerEvents: "none",
+    },
   };
 
   if (type === "primary") {
