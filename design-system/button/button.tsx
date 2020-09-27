@@ -13,9 +13,11 @@ interface ButtonProps {
 
   isLoading?: boolean;
 
+  loadingText?: string;
+
   bgColor: string;
 
-  onClick: (ev: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (ev: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 type Ref = HTMLButtonElement;
@@ -28,6 +30,7 @@ export const Button = forwardRef<Ref, ButtonProps>(
       isLoading = false,
       isDisabled = false,
       bgColor,
+      loadingText,
       ...rest
     },
     ref
@@ -35,7 +38,7 @@ export const Button = forwardRef<Ref, ButtonProps>(
     const buttonStyles = computeVariants({ type, isDisabled });
     return (
       <button
-        disabled={isDisabled}
+        disabled={isDisabled || isLoading}
         ref={ref}
         //@ts-ignore
         css={{
@@ -46,7 +49,7 @@ export const Button = forwardRef<Ref, ButtonProps>(
         }}
         {...rest}
       >
-        {isLoading && "loading"}
+        {isLoading && loadingText}
         {!isLoading && children}
       </button>
     );
